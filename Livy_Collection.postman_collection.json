@@ -1,0 +1,761 @@
+{
+	"info": {
+		"_postman_id": "c4e4fa00-91c3-4e77-9cf9-2b0071948c38",
+		"name": "Livy_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Livy_Session",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-By",
+						"value": "EMB",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"kind\" : \"pyspark\"\n}"
+				},
+				"url": {
+					"raw": "10.0.4.115:8999/sessions",
+					"host": [
+						"10",
+						"0",
+						"4",
+						"115"
+					],
+					"port": "8999",
+					"path": [
+						"sessions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Livy_Batch_ES",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-By",
+						"value": "EMB",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"file\": \"/user/admin/Livy_Jobs/ES/prepare_db.py\",\n    \"pyFiles\" : [\"/user/admin/Livy_Jobs/ES/logging_init.py\",\"/user/admin/Livy_Jobs/ES/conf.py\", \"/user/admin/Livy_Jobs/ES/check_if_elasticsearch_up.py\", \"/user/admin/Livy_Jobs/ES/page_extract.py\", \"/user/admin/Livy_Jobs/ES/mapping_init.py\", \"/user/admin/Livy_Jobs/ES/get_parents.py\", \"/user/admin/Livy_Jobs/ES/HomeCorp.py\", \"/user/admin/Livy_Jobs/ES/SubPage.py\", \"/user/admin/Livy_Jobs/ES/page_index.py\", \"/user/admin/Livy_Jobs/ES/get_logo.py\", \"/user/admin/Livy_Jobs/ES/rest_utils.py\", \"/user/admin/Livy_Jobs/ES/constants.py\", \"/user/admin/Livy_Jobs/ES/rotate_proxy.py\", \"/user/admin/Livy_Jobs/ES/update_parents.py\"]\n}"
+				},
+				"url": {
+					"raw": "10.0.4.115:8999/batches",
+					"host": [
+						"10",
+						"0",
+						"4",
+						"115"
+					],
+					"port": "8999",
+					"path": [
+						"batches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Livy_Batch_ES Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-By",
+						"value": "EMB",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"file\": \"/user/admin/Livy_Jobs/Jenkins/phones_emails/emailExtractor.py\",\n    \"args\": [\n        \"email\"\n    ],\n    \"driverMemory\": \"2g\",\n    \"driverCores\": 2,\n    \"executorMemory\": \"3g\",\n    \"executorCores\": 4,\n    \"numExecutors\": 20\n}"
+				},
+				"url": {
+					"raw": "10.0.4.115:8999/batches",
+					"host": [
+						"10",
+						"0",
+						"4",
+						"115"
+					],
+					"port": "8999",
+					"path": [
+						"batches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Livy_Batch_ESMonday",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-By",
+						"value": "EMB",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"file\": \"/user/admin/Livy_Jobs/ES_Monday/crawler_es.py\",\n    \"pyFiles\" : [\"/user/admin/Livy_Jobs/ES_Monday/HomeCorp.py\"]\n}"
+				},
+				"url": {
+					"raw": "10.0.4.115:8999/batches",
+					"host": [
+						"10",
+						"0",
+						"4",
+						"115"
+					],
+					"port": "8999",
+					"path": [
+						"batches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Livy_Batch_ESMonday Dumps",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Requested-By",
+						"type": "text",
+						"value": "EMB"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"file\": \"/user/admin/Livy_Jobs/Crawler_OP.py\"\n}"
+				},
+				"url": {
+					"raw": "10.0.4.115:8999/batches",
+					"host": [
+						"10",
+						"0",
+						"4",
+						"115"
+					],
+					"port": "8999",
+					"path": [
+						"batches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Livy_Batch_ESMonday ES",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Requested-By",
+						"type": "text",
+						"value": "EMB"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"file\": \"/user/admin/Livy_Jobs/Company_House_Spark.py\",\n    \"args\": [\"BasicCompanyDataAsOneFile.csv\", \"300\"],\n    \"driverMemory\" : \"2g\",\n    \"driverCores\" : 2,\n    \"executorMemory\" : \"4g\",\n    \"executorCores\" : 4,\n    \"numExecutors\" : 20\n}"
+				},
+				"url": {
+					"raw": "10.0.4.115:8999/batches",
+					"host": [
+						"10",
+						"0",
+						"4",
+						"115"
+					],
+					"port": "8999",
+					"path": [
+						"batches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Livy_Batch_ESFriday_Dup_2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-By",
+						"value": "EMB",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n    \"file\": \"/user/admin/Livy_Jobs/Crawler_NLog/go.py\",\n    \"args\" : [\"430k.csv\", \"False\", \"True\"],\n    \"pyFiles\" : [\"/user/admin/Livy_Jobs/Crawler_NLog/conf.py\", \"/user/admin/Livy_Jobs/Crawler_NLog/check_if_elasticsearch_up.py\", \"/user/admin/Livy_Jobs/Crawler_NLog/page_extract.py\", \"/user/admin/Livy_Jobs/Crawler_NLog/mapping_init.py\", \"/user/admin/Livy_Jobs/Crawler_NLog/get_parents.py\", \"/user/admin/Livy_Jobs/Crawler_NLog/HomeCorp.py\", \"/user/admin/Livy_Jobs/Crawler_NLog/SubPage.py\", \"/user/admin/Livy_Jobs/Crawler_NLog/page_index.py\", \"/user/admin/Livy_Jobs/Crawler_NLog/get_logo.py\", \"/user/admin/Livy_Jobs/Crawler_NLog/rest_utils.py\", \"/user/admin/Livy_Jobs/Crawler_NLog/constants.py\", \"/user/admin/Livy_Jobs/Crawler_NLog/rotate_proxy.py\", \"/user/admin/Livy_Jobs/Crawler_NLog/update_parents.py\"],\n    \"driverMemory\" : \"2g\",\n    \"driverCores\" : 2,\n    \"executorMemory\" : \"3g\",\n    \"executorCores\" : 2,\n    \"numExecutors\" : 20\n}"
+				},
+				"url": {
+					"raw": "10.0.4.115:8999/batches/",
+					"host": [
+						"10",
+						"0",
+						"4",
+						"115"
+					],
+					"port": "8999",
+					"path": [
+						"batches",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "YLivy_Session",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-By",
+						"value": "EMB",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"kind\" : \"pyspark\"\n}"
+				},
+				"url": {
+					"raw": "172.16.2.31:8998/sessions",
+					"host": [
+						"172",
+						"16",
+						"2",
+						"31"
+					],
+					"port": "8998",
+					"path": [
+						"sessions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "YLivy_Batch",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-By",
+						"value": "EMB",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"file\" : \"/tmp/livy/crawler.py\",\n    \"pyFiles\" : [\"/tmp/livy/HomeCorp.py\"]\n}"
+				},
+				"url": {
+					"raw": "172.16.2.31:8998/batches",
+					"host": [
+						"172",
+						"16",
+						"2",
+						"31"
+					],
+					"port": "8998",
+					"path": [
+						"batches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Livy_Delete",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Livy_Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-By",
+						"value": "EMB",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://10.0.4.111:8999/batches/4",
+					"protocol": "http",
+					"host": [
+						"10",
+						"0",
+						"4",
+						"111"
+					],
+					"port": "8999",
+					"path": [
+						"batches",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Count_ES",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "10.0.4.19:9200/accounts/_count",
+					"host": [
+						"10",
+						"0",
+						"4",
+						"19"
+					],
+					"port": "9200",
+					"path": [
+						"accounts",
+						"_count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Duration_ES",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"aggs\": {\n        \"min_date\": {\n            \"min\": {\n                \"field\": \"last_update\"\n            }\n        },\n        \"max_date\": {\n            \"max\": {\n                \"field\": \"last_update\"\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "10.0.4.19:9200/accounts/_search?size=0",
+					"host": [
+						"10",
+						"0",
+						"4",
+						"19"
+					],
+					"port": "9200",
+					"path": [
+						"accounts",
+						"_search"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Count Children",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\":{\n        \"has_parent\":{\n            \"parent_type\": \"home_page\",\n            \"query\":{\n                \"match_all\": {}\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "10.0.4.19:9200/accounts/_count",
+					"host": [
+						"10",
+						"0",
+						"4",
+						"19"
+					],
+					"port": "9200",
+					"path": [
+						"accounts",
+						"_count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Count Parents",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\":{\n        \"bool\":{\n            \"must\":{\n                \"exists\":{\n                    \"field\": \"text\"\n                }\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "10.0.4.19:9200/accounts/_count",
+					"host": [
+						"10",
+						"0",
+						"4",
+						"19"
+					],
+					"port": "9200",
+					"path": [
+						"accounts",
+						"_count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Company House",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-By",
+						"value": "EMB",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"file\": \"/user/admin/Livy_Jobs/Jenkins/companyHouse/Company_House_Spark.py\",\n    \"args\": [\"['BasicCompanyDataAsOneFile.csv']\", \"duedil_websites.csv\", \"accounts\", \"10.0.4.112\", \"2100\"],\n    \"driverMemory\" : \"4g\",\n    \"driverCores\" : 2,\n    \"executorMemory\" : \"2g\",\n    \"executorCores\" : 2,\n    \"numExecutors\" : 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "10.0.4.111:8999/batches",
+					"host": [
+						"10",
+						"0",
+						"4",
+						"111"
+					],
+					"port": "8999",
+					"path": [
+						"batches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sales Force",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-By",
+						"value": "EMB",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"file\": \"/user/admin/Livy_Jobs/Jenkins/salesforce/salesforce_mini.py\",\n    \"args\": [\"accounts_sf\", \"450\"],\n    \"driverMemory\" : \"4g\",\n    \"driverCores\" : 2,\n    \"executorMemory\" : \"3g\",\n    \"executorCores\" : 2,\n    \"numExecutors\" : 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "10.0.4.115:8999/batches",
+					"host": [
+						"10",
+						"0",
+						"4",
+						"115"
+					],
+					"port": "8999",
+					"path": [
+						"batches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Parents_Only",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-By",
+						"value": "EMB",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"file\": \"/user/admin/Livy_Jobs/Jenkins/parents/go.py\",\n    \"pyFiles\": [\n        \"/user/admin/Livy_Jobs/Jenkins/parents/HomeCorp.py\",\n        \"/user/admin/Livy_Jobs/Jenkins/parents/SubPage.py\",\n        \"/user/admin/Livy_Jobs/Jenkins/parents/conf.py\",\n        \"/user/admin/Livy_Jobs/Jenkins/parents/constants.py\",\n        \"/user/admin/Livy_Jobs/Jenkins/parents/get_logo.py\",\n        \"/user/admin/Livy_Jobs/Jenkins/parents/go.py\",\n        \"/user/admin/Livy_Jobs/Jenkins/parents/init_mapping.py\",\n        \"/user/admin/Livy_Jobs/Jenkins/parents/init_parents.py\",\n        \"/user/admin/Livy_Jobs/Jenkins/parents/mapping.py\",\n        \"/user/admin/Livy_Jobs/Jenkins/parents/page_extract.py\",\n        \"/user/admin/Livy_Jobs/Jenkins/parents/page_index.py\",\n        \"/user/admin/Livy_Jobs/Jenkins/parents/rest_utils.py\",\n        \"/user/admin/Livy_Jobs/Jenkins/parents/rotate_proxy.py\"\n    ],\n    \"driverMemory\": \"2g\",\n    \"driverCores\": 2,\n    \"executorMemory\": \"4g\",\n    \"executorCores\": 4,\n    \"numExecutors\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "10.0.4.115:8999/batches",
+					"host": [
+						"10",
+						"0",
+						"4",
+						"115"
+					],
+					"port": "8999",
+					"path": [
+						"batches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stargate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-By",
+						"value": "EMB",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"file\": \"/user/admin/Livy_Jobs/Jenkins/stargate/run_stargate.py\",\n    \"pyFiles\": [\n        \"/user/admin/Livy_Jobs/Jenkins/stargate/common_functions.py\",\n        \"/user/admin/Livy_Jobs/Jenkins/stargate/configs.py\",\n        \"/user/admin/Livy_Jobs/Jenkins/stargate/dns_utils.py\"\n    ],\n    \"driverMemory\": \"2g\",\n    \"driverCores\": 2,\n    \"executorMemory\": \"4g\",\n    \"executorCores\": 4,\n    \"numExecutors\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "10.0.4.115:8999/batches",
+					"host": [
+						"10",
+						"0",
+						"4",
+						"115"
+					],
+					"port": "8999",
+					"path": [
+						"batches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Parents Crawl New",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-By",
+						"value": "EMB",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"file\": \"/user/admin/Livy_Jobs/Jenkins/parents_new/go.py\",\n    \"pyFiles\": [\"/user/admin/Livy_Jobs/Jenkins/parents_new/HomeCorp.py\"],\n    \"driverMemory\": \"2g\",\n    \"driverCores\": 2,\n    \"executorMemory\": \"3g\",\n    \"executorCores\": 2,\n    \"numExecutors\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "10.0.4.111:8999/batches",
+					"host": [
+						"10",
+						"0",
+						"4",
+						"111"
+					],
+					"port": "8999",
+					"path": [
+						"batches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Count Crawled",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"query\":{\n        \"bool\":{\n            \"must\":{\n                \"query_string\":{\n                    \"default_field\": \"extract_status\",\n                    \"query\": \"200\"\n                }\n            }\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "10.0.4.112:9200/accounts/_count",
+					"host": [
+						"10",
+						"0",
+						"4",
+						"112"
+					],
+					"port": "9200",
+					"path": [
+						"accounts",
+						"_count"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
